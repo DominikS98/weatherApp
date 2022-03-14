@@ -7,7 +7,7 @@ html {
 }
 body {
   width: 100vh;
-  height: 100vh;
+  height: 99vh;
   background-image: linear-gradient(
     to right bottom,
     #4e3c45,
