@@ -11,14 +11,14 @@ let find = {
 };
 
 function faindCity() {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${find.city}&limit=1&appid=${find.apiKey}&lang=pl`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${find.city}&limit=1&appid=${find.apiKey}&lang=pl`;
     return fetch(url).then(respon => {
         return respon.json();
     });
 }
 
 function Wather() {
-    const url2 = `http://api.openweathermap.org/data/2.5/weather?lat=${find.lat}&lon=${find.lon}&appid=${find.apiKey}&lang=pl`;
+    const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${find.lat}&lon=${find.lon}&appid=${find.apiKey}&lang=pl`;
     return fetch(url2).then(respon => {
 
         return respon.json();
@@ -64,7 +64,7 @@ function UiChange() {
     document.querySelector('#czas').innerHTML = time;
     document.querySelector('#miasto').innerHTML = find.city + " " + find.mainTemp;
     document.querySelector('#opis').innerHTML = find.description;
-    document.querySelector('.img').src = `http://openweathermap.org/img/wn/${find.icon}.png`;
+    document.querySelector('.img').src = `https://openweathermap.org/img/wn/${find.icon}.png`;
 
 }
 
